@@ -1,7 +1,7 @@
 #summary Indexed search with Zizelo is as simple as 3 steps
 #labels Featured,Phase-Deploy
 
-*This guide is for version 1.0.*
+*This guide is for last stable version.*
 
 Basic usage includes:
  # Configuring.
@@ -14,7 +14,7 @@ Basic usage includes:
 
 There are two ways to install Zizelo: by repository checkout or by downloading package.
 
-To checkout the repository, visit the _Source_ section.
+To checkout the repository, visit the _Source_ section. Use *_stable_* version: _hg up stable_.
 
 To download last stable version, visit the _Downloads_ section.
 
@@ -129,7 +129,7 @@ $matches = Zizelo_Facade::getIndex("books")->search("dorian gray");
 
 The result is an array of numeric identifiers of matched documents. If the index contains document for _The Picture of Dorian Gray_ (see example above), `$matches` will contain 5375 (and may contain another identifiers as well, if there are other books with “Dorian Gray” in titles).
 
-The array is sorted: most relevant results are in the end.
+The array is sorted: most relevant results are first.
 
 You can now fetch actual books from the database using their identifiers and show their list to the visitor.
 
